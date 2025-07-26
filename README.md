@@ -55,8 +55,18 @@ The entire process, from data loading to model evaluation and inference, is cont
 
 ## 📂 File Descriptions
 
-- `Fine_Tuned_DistilBERT.ipynb`: The main notebook containing all the code for data processing, model training, and evaluation.  
-- `README.md`: This file, providing an overview and guide to the project.  
+- `Fine_Tuned_DistilBERT.ipynb`: A Jupyter notebook that walks through the entire fine-tuning process, from data loading to inference.
+- `train.py`: Contains the training pipeline including:
+  - Model loading (`DistilBERT`)
+  - Training argument configuration
+  - Trainer setup
+  - Model training, saving, and inference using Hugging Face’s `pipeline` API.
+- `dataset.py`: Handles all dataset-related preprocessing tasks:
+  - Loading and balancing the IMDb dataset
+  - Decoding integer-encoded reviews to text
+  - Tokenizing the text using a pretrained tokenizer
+  - Creating a custom `PyTorch Dataset` to be used in training.
+- `README.md`: Provides an overview, usage instructions, and setup guide for the project.
 
 ---
 
